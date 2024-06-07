@@ -17,7 +17,7 @@ namespace Online_Store.Repositories
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _entities.FindAsync();
+            return await _entities.FindAsync(id);
         }
         public async Task<IEnumerable<T>> GetAllAsync()
         {

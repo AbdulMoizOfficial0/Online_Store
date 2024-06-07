@@ -16,6 +16,7 @@ namespace Online_Store.UnitOfWork
             Orders = new Repository<Order>(_context);
             Customers = new Repository<Customer>(_context);
             OrderItems = new Repository<OrderItem>(_context);
+            Items = new Repository<OrderItem>(_context);
         }
 
         public IRepository<Product> Products { get; private set; }
@@ -24,7 +25,7 @@ namespace Online_Store.UnitOfWork
         public IRepository<Customer> Customers { get; private set; }
         public IRepository<OrderItem> OrderItems { get; private set; }
 
-        public IRepository<OrderItem> Items => throw new NotImplementedException();
+        public IRepository<OrderItem> Items { get; private set; }
 
         public async Task<int> CompleteAsync()
         {
