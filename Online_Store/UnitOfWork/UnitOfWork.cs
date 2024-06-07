@@ -15,7 +15,6 @@ namespace Online_Store.UnitOfWork
             Categories = new Repository<Category>(_context);
             Orders = new Repository<Order>(_context);
             Customers = new Repository<Customer>(_context);
-            OrderItems = new Repository<OrderItem>(_context);
             Items = new Repository<OrderItem>(_context);
         }
 
